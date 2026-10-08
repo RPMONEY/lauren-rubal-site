@@ -14,7 +14,7 @@ python3 tools/pages.py site <BUILD>
 python3 tools/legal.py site <BUILD>
 ```
 
-Deploy: `wrangler.jsonc` serves `site/`. Connect the repo to a Cloudflare Worker named `laurenrubalmd` and every push to `main` deploys.
+Deploy: `wrangler.jsonc` serves `site/`. Connect the repo to a Cloudflare Worker named `lauren-rubal-site` and every push to `main` deploys.
 
 ## Open before launch
 - Legal: legal entity name, office email, Privacy Officer, effective date, insurance vs self-pay

@@ -28,88 +28,187 @@ def head_band(crumb, eyebrow, h1, lede=""):
     return f'<section class="legal-head about-head"><div class="wrap">{c}<span class="eyebrow">{eyebrow}</span><h1>{h1}</h1>{l}</div></section>'
 
 # ---------------------------------------------------------------- programs
+# Each program page: title + patient question + editorial prose, sticky consult card,
+# conditions list, when to be seen, evaluation steps, treatment options, quote, FAQ.
 PROGRAMS = [
- dict(slug="normalized-cycles", name="Normalized Cycles", img="im-gynecology.jpg",
-  h1="Normalized <em>Cycles</em>",
-  lede="Our Normalized Cycles program is designed to address a range of menstrual issues, including Polycystic Ovary Syndrome (PCOS), painful periods, Premenstrual Syndrome (PMS), and other menstrual irregularities.",
-  intro="Your cycle is a vital sign. When periods are irregular, painful, heavy, or absent, it is usually a signal that something underneath deserves a closer look. This program focuses on understanding why your cycle is behaving the way it is, then building an individualized plan to restore a healthier rhythm.",
-  addresses=["Polycystic Ovary Syndrome (PCOS)","Irregular or missed periods","Painful periods","Heavy or abnormal bleeding","Premenstrual Syndrome (PMS)","Uterine fibroids and polyps"],
-  steps=[("i-clip","Detailed evaluation","Your cycle history, symptoms, hormones, and contributing factors such as inflammation and metabolic health."),
-         ("i-doc","Cycle tracking","Learning to read your own cycle so patterns and changes are easy to see."),
-         ("i-leaf","Integrative plan","Lifestyle, nutrition, and targeted support, with conventional treatment when it is the right tool."),
-         ("i-people","Follow-up","Adjusting the plan as your cycle responds.")],
-  row=("Integrative Gynecology", "Simply that a woman is not just her ovaries.", "You are a whole person. And so we must address and acknowledge your mental, emotional, spiritual, and physical state.")),
- dict(slug="optimized-fertility", name="Optimized Fertility &amp; Miscarriage Prevention", img="im-fertility.jpg",
-  h1="Optimized <em>Fertility</em> &amp; Miscarriage Prevention",
-  lede="Our Optimized Fertility &amp; Miscarriage Prevention program is specifically tailored for individuals and couples aiming to conceive, offering comprehensive support to enhance fertility and reduce the risk of miscarriage.",
-  intro="Also known as Restorative Reproductive Medicine, this approach looks at understanding the reasons behind fertility issues using a detailed evaluation of your hormones, inflammation, nutrient status, microbiomes, gut, and environmental exposures.",
-  addresses=["Difficulty conceiving","Recurrent pregnancy loss","Ovulation problems","Hormonal imbalances affecting fertility","Uterine factors such as fibroids or polyps","Preparing your body for pregnancy"],
-  steps=[("i-clip","Root-cause evaluation","Hormones, inflammation, nutrient status, microbiomes, gut, and environmental exposures."),
-         ("i-doc","A tailored plan","Supplements, hormone optimization, lifestyle changes, and potentially surgery to normalize structure and anatomy."),
-         ("i-leaf","Close monitoring","Cycles monitored with ultrasounds and other methods, such as serial hormone levels."),
-         ("i-heart","Ongoing support","A partnership through every cycle, adjusting as you go.")],
-  row=("Integrative Fertility", "Understanding the reasons behind fertility issues.", "A tailored plan is created using supplements, hormone optimization, lifestyle changes, and potentially even surgeries to normalize structure &amp; anatomy. I also monitor your cycles closely with ultrasounds and other methods, such as serial hormone levels.")),
- dict(slug="hormone-transition", name="Hormone Transition", img="im-medicine.jpg",
-  h1="Hormone <em>Transition</em>",
-  lede="Our Hormone Transition program offers specialized support for individuals navigating significant hormonal changes during key life stages: adolescence, postpartum, and menopause.",
-  intro="Hormonal transitions affect sleep, mood, energy, cycles, and long-term health. This program offers personalized, evidence-based support to help you understand what is changing and navigate each stage with clarity.",
-  addresses=["Adolescent cycles and hormones","Postpartum hormonal changes","Perimenopause","Menopause","Sleep, mood, and energy changes tied to hormones"],
-  steps=[("i-clip","Understanding the stage","A clear look at where you are hormonally and what you are experiencing."),
-         ("i-doc","Personalized options","Lifestyle, nutritional, and medical options weighed against your goals and history."),
-         ("i-leaf","Whole-person care","Attention to sleep, stress, and long-term health, not only symptoms."),
-         ("i-people","Adjusting over time","Care that evolves as your body does.")],
-  row=("Integrative Medicine", "Oriented to healing.", "It is medicine that is oriented to healing, to understanding we are more than our physical ailments. It seeks out all appropriate therapies, including conventional and alternative, and emphasizes the partnership between you and me.")),
- dict(slug="integrative-tools", name="Integrative Tools", img="mock-consult.jpg",
-  h1="Integrative <em>Tools</em>",
-  lede="Our Integrative Tools program is meticulously crafted to address a wide array of health concerns, including chronic stress, sleep disturbances, fatigue, thyroid imbalances, heart health, mood issues, and beyond.",
-  intro="These are the factors that quietly shape hormonal and reproductive health. Integrative Tools is part of every program, and it can also be the focus of your care on its own.",
-  addresses=["Chronic stress","Sleep disturbances","Fatigue","Thyroid imbalances","Heart health","Mood"],
-  steps=[("i-clip","Comprehensive evaluation","Looking at how stress, sleep, thyroid, and metabolic health interact with your hormones."),
-         ("i-leaf","Lifestyle and nutrition","Practical, individualized changes that fit your life."),
-         ("i-doc","Targeted support","Supplements and conventional treatment chosen on the evidence."),
-         ("i-people","Partnership","Time for follow-up, questions, and adjustment.")],
-  row=("Integrative Medicine", "More than our physical ailments.", "It seeks out all appropriate therapies, including conventional and alternative, and emphasizes the partnership between you and me.")),
+ dict(slug="normalized-cycles", name="Normalized Cycles", short="Normalized Cycles", talk="your cycles",
+  quote="“My periods have always been like this. Is that just normal for me?”",
+  intro=[
+   "Many women are told that painful, heavy, or unpredictable periods are something to live with, or that the only answer is to suppress them. Dr. Rubal sees it differently. Your cycle is a window into your overall health, and when it is off, there is usually a reason worth finding.",
+   "Cycle problems can come from many places: whether and how well you ovulate, the balance between estrogen and progesterone, thyroid function, insulin resistance, inflammation, or structural changes in the uterus such as fibroids or polyps. Two women with the same symptom can have very different causes, which is why care starts with understanding yours.",
+   "Our Normalized Cycles program is designed to address a range of menstrual issues, including Polycystic Ovary Syndrome (PCOS), painful periods, Premenstrual Syndrome (PMS), and other menstrual irregularities. The goal is a healthier, more predictable cycle with fewer symptoms, and a stronger foundation for fertility whenever that time comes."],
+  treat_h="What we treat",
+  treat=[
+   ("PCOS", "Irregular or absent ovulation, often with acne, excess hair growth, or insulin resistance. One of the most common causes of irregular cycles."),
+   ("Endometriosis", "Tissue similar to the uterine lining growing outside the uterus, often causing painful periods, pelvic pain, or pain with intercourse, and sometimes affecting fertility."),
+   ("Painful periods", "Cramping that disrupts school, work, or daily life is not something you simply have to push through."),
+   ("PMS and PMDD", "Physical and emotional symptoms in the days before your period, from bloating and breast tenderness to irritability, anxiety, or low mood."),
+   ("Heavy or prolonged bleeding", "Soaking through a pad or tampon every hour or two, passing large clots, or bleeding for more than seven days."),
+   ("Irregular or missed periods", "Cycles that are unpredictable, very short or very long, or that stop altogether."),
+   ("Fibroids and polyps", "Noncancerous growths in or on the uterus that can cause heavy bleeding, bleeding between periods, pressure, or difficulty conceiving.")],
+  when=["Your periods regularly cause you to miss school, work, or plans",
+        "You soak through a pad or tampon every one to two hours",
+        "Your cycles are shorter than 21 days or longer than 35 days",
+        "You have missed three or more periods in a row and are not pregnant",
+        "You bleed between periods or after intercourse",
+        "You've been told suppressing your cycle is your only option"],
+  steps=[("A detailed history", "Your cycles, symptoms, health history and goals, in an unhurried first visit."),
+         ("Cycle charting", "Learning to observe and record your own cycle, so patterns and ovulation become visible."),
+         ("Targeted testing", "Hormone levels timed to your cycle, thyroid and metabolic testing, and pelvic ultrasound as appropriate."),
+         ("Your plan", "Reviewed together, with time for questions, and adjusted as your cycle responds.")],
+  tx=[("Restorative and lifestyle", ["Nutrition and metabolic support", "Sleep, stress and movement", "Targeted supplements where the evidence supports them"]),
+      ("Medical and surgical", ["Cycle-timed hormone support", "Medication for specific conditions, such as insulin resistance", "Minimally invasive surgery for endometriosis, fibroids, or polyps when needed"])],
+  pull=("Simply that a woman is not just her ovaries. You are a whole person.", "Dr. Lauren Rubal"),
+  faq=[("Do I have to go on birth control?", "Not necessarily. Dr. Rubal’s focus is finding and treating the underlying cause of your symptoms. She will walk you through all of your options so you can make an informed choice that fits your goals."),
+       ("Can I come in if I’m not trying to get pregnant?", "Yes. Many patients come in simply to feel better and understand their bodies. A healthy cycle matters at every stage of life."),
+       ("Do you see teenagers?", "Yes. Cycle concerns often begin in adolescence, and our <a href=\"hormone-transition.html\">Hormone Transition</a> program includes care for teens."),
+       ("Are virtual visits available?", "Yes. Visits are available in person in San Juan Capistrano or by secure video.")]),
+
+ dict(slug="optimized-fertility", name="Optimized Fertility &amp; Miscarriage Prevention", short="Fertility &amp; Miscarriage", talk="your fertility",
+  quote="“We’ve been trying for a while. Is something wrong?”",
+  intro=[
+   "Not conceiving when you expected to, or losing a pregnancy, can feel isolating and overwhelming. Dr. Rubal practiced full-scope reproductive endocrinology and infertility for years, and she knows how many layers this diagnosis carries.",
+   "When couples go to a fertility center, they may feel pressured to go directly to IVF. For some, it is not an option they are interested in, because of their beliefs, the cost, the hormones, or the procedures involved. Others have tried it without success. Our Optimized Fertility &amp; Miscarriage Prevention program offers a different starting point.",
+   "Also known as Restorative Reproductive Medicine, it looks at understanding the reasons behind fertility issues using a detailed evaluation of your hormones, inflammation, nutrient status, microbiomes, gut, and environmental exposures. Hormonal medications are used judiciously, as one part of a broader plan, and your cycles are monitored closely to support your fertility month by month."],
+  treat_h="Who this program helps",
+  treat=[
+   ("Difficulty conceiving", "Generally defined as not conceiving after 12 months of trying, or after 6 months if you are 35 or older. You don’t have to wait that long to ask questions."),
+   ("Recurrent pregnancy loss", "Two or more pregnancy losses. A focused evaluation can identify contributing factors that may be addressed before the next pregnancy."),
+   ("Ovulation problems", "Irregular, absent, or poorly supported ovulation, including ovulation problems related to PCOS or thyroid function."),
+   ("Endometriosis and uterine factors", "Endometriosis, fibroids, polyps, and other structural factors that can affect conception and implantation."),
+   ("Unexplained infertility", "When standard testing hasn’t provided an answer, a closer look at hormones, inflammation, and cycle health may reveal more."),
+   ("Preparing for pregnancy", "Optimizing your health before you begin trying, so you start from the strongest possible foundation.")],
+  when=["You’ve been trying for 12 months, or 6 months if you are 35 or older",
+        "You’ve had two or more pregnancy losses",
+        "Your cycles are irregular or you’re unsure whether you ovulate",
+        "You have a known condition such as PCOS, endometriosis, or a thyroid disorder",
+        "You want an alternative to IVF, or IVF hasn’t worked for you"],
+  steps=[("Your full story", "Both partners’ health history, any prior testing and treatment, and what you want your path to look like."),
+         ("Cycle charting and monitoring", "Tracking your cycle, with ultrasounds and serial hormone levels to see how ovulation and the uterine lining are working."),
+         ("Root-cause testing", "Hormones, thyroid, inflammation, nutrient status and other factors, evaluation of the uterus and tubes, and a semen analysis for your partner when appropriate."),
+         ("After pregnancy loss", "A focused evaluation that can include uterine, hormonal, genetic, blood-clotting and immune factors.")],
+  tx=[("Restorative and lifestyle", ["Nutrition, lifestyle and metabolic optimization", "Targeted supplements where the evidence supports them", "Timing guided by your own charted cycle"]),
+      ("Medical and surgical", ["Hormone optimization and ovulation support", "Treatment of thyroid and other contributing conditions", "Surgery to normalize structure and anatomy when needed"])],
+  pull=("It’s an honor to walk the difficult parts of the journey together. It is such a blessing to see joyous outcomes.", "Dr. Lauren Rubal"),
+  faq=[("Do you offer IVF?", "Dr. Rubal’s practice focuses on restorative reproductive medicine, which works to identify and treat the underlying causes of infertility. She is happy to talk through every option with you, including IVF."),
+       ("Should my partner be evaluated too?", "Yes, when appropriate. Fertility involves both partners, and a semen analysis is a standard part of a complete evaluation."),
+       ("I’ve already had testing elsewhere. Will I need to repeat it?", "Bring your records. Dr. Rubal will review what has already been done and recommend additional testing only where it adds something."),
+       ("Can I come in after a recent loss?", "Yes. Whether your loss was recent or some time ago, Dr. Rubal can help you understand what may have contributed and plan for what comes next.")]),
+
+ dict(slug="hormone-transition", name="Hormone Transition", short="Hormone Transition", talk="hormone changes",
+  quote="“I just don’t feel like myself anymore.”",
+  intro=[
+   "Hormones shift at predictable points in life, and those shifts can affect your cycle, sleep, mood, energy, skin, weight and long-term health. Too often, women are told these changes are simply part of growing up, having a baby, or getting older, and that there is little to do but wait them out.",
+   "Our Hormone Transition program offers specialized support for individuals navigating significant hormonal changes during key life stages: adolescence, postpartum, and menopause. Dr. Rubal looks at what is changing, why, and what can help, using lifestyle, nutritional and medical options matched to your history and goals."],
+  treat_h="Three key life stages",
+  treat=[
+   ("Adolescence", "The first years of menstruation are often irregular, but painful, very heavy, or absent periods deserve attention. Early signs of conditions such as PCOS or endometriosis often appear in the teen years, and a thoughtful evaluation can make a lasting difference."),
+   ("Postpartum", "After pregnancy, hormones shift dramatically. Cycles may take time to return, especially while breastfeeding, and some women develop thyroid changes, mood changes, fatigue, or bleeding concerns that deserve a closer look."),
+   ("Perimenopause and menopause", "Perimenopause can begin years before your final period, often in your 40s, bringing irregular cycles, hot flashes, night sweats, disrupted sleep, mood changes and vaginal dryness. Menopause is reached after 12 months without a period, and the years around it are an important time to protect long-term heart and bone health.")],
+  when=["A teen’s periods haven’t started by age 15, or are extremely painful or heavy",
+        "Your cycle hasn’t settled into a pattern months after having a baby",
+        "Hot flashes, night sweats, or poor sleep are affecting daily life",
+        "You notice heavy bleeding, bleeding between periods, or any bleeding after menopause",
+        "Mood, energy, or weight have changed and no one has explained why"],
+  steps=[("Understanding where you are", "Your stage of life, symptoms, cycle history and goals."),
+         ("Targeted testing", "Hormone, thyroid and metabolic testing, and pelvic ultrasound when bleeding patterns change."),
+         ("Options weighed together", "Lifestyle and nutrition, supplements, and hormone therapy when appropriate, considered against your health history."),
+         ("Adjusting over time", "Transitions unfold over months and years, and your care evolves with them.")],
+  tx=[("Restorative and lifestyle", ["Nutrition and metabolic support", "Sleep, stress and movement", "Targeted supplements where the evidence supports them"]),
+      ("Medical", ["Hormone therapy when appropriate for your age and history", "Treatment of thyroid and other contributing conditions", "Evaluation and treatment of abnormal bleeding"])],
+  pull=("It is medicine that is oriented to healing, to understanding we are more than our physical ailments.", "Dr. Lauren Rubal"),
+  faq=[("Is hormone therapy safe?", "For many women, menopausal hormone therapy can be a safe and effective option. The right choice depends on your age, health history and symptoms, and Dr. Rubal will walk you through the benefits and risks for you specifically."),
+       ("Are irregular periods normal in my 40s?", "Cycle changes are common in perimenopause. Heavy bleeding, bleeding between periods, or any bleeding after menopause should always be evaluated."),
+       ("When should a teenager see a specialist?", "If periods haven’t started by 15, are severely painful or very heavy, or are still very irregular a few years after they begin."),
+       ("Can you help if I’m breastfeeding?", "Yes. Treatment options are always chosen with breastfeeding in mind.")]),
+
+ dict(slug="integrative-tools", name="Integrative Tools", short="Integrative Tools", talk="your whole health",
+  quote="“My labs are normal, but I still don’t feel right.”",
+  intro=[
+   "Hormonal and reproductive health doesn’t exist in isolation. Chronic stress, poor sleep, fatigue, thyroid imbalances, heart health and mood all influence your hormones, and your hormones influence them in return.",
+   "Our Integrative Tools program is meticulously crafted to address a wide array of health concerns, including chronic stress, sleep disturbances, fatigue, thyroid imbalances, heart health, mood issues, and beyond. It is part of every program we offer, and it can also be the focus of your care on its own."],
+  treat_h="What we address",
+  treat=[
+   ("Chronic stress", "Ongoing stress affects stress hormones that can disrupt ovulation, cycle regularity, sleep and mood."),
+   ("Sleep disturbances", "Trouble falling or staying asleep, often tied to hormonal shifts, stress, or night sweats."),
+   ("Fatigue", "Persistent exhaustion can have identifiable contributors, from thyroid function and iron levels to blood sugar and hormonal changes."),
+   ("Thyroid imbalances", "The thyroid influences cycles, fertility and pregnancy, and even subtle imbalances can matter."),
+   ("Heart health", "Reproductive history, including PCOS, pregnancy complications and menopause, is closely linked to long-term cardiovascular health."),
+   ("Mood", "Anxiety, low mood and irritability can rise and fall with hormonal changes, and deserve to be taken seriously.")],
+  when=["You feel exhausted despite getting enough rest",
+        "Stress or poor sleep is affecting your cycle or daily life",
+        "You’ve been told your labs are normal but your symptoms persist",
+        "You have a thyroid condition alongside cycle or fertility concerns",
+        "You want a more complete look at your long-term health"],
+  steps=[("A comprehensive evaluation", "How stress, sleep, thyroid, metabolic health and hormones interact in your body."),
+         ("Targeted testing", "Thyroid, iron, metabolic and inflammatory markers, and others as appropriate."),
+         ("Practical changes", "Nutrition, sleep, stress and movement, tailored to what fits your life."),
+         ("Targeted support", "Supplements and conventional treatment, each chosen on the evidence and reviewed over time.")],
+  tx=[("Restorative and lifestyle", ["Nutrition and metabolic support", "Sleep and stress-resilience strategies", "Movement suited to your health and goals"]),
+      ("Medical", ["Targeted supplements where the evidence supports them", "Thyroid evaluation and treatment", "Conventional medication when indicated"])],
+  pull=("You are a whole person. And so we must address and acknowledge your mental, emotional, spiritual, and physical state.", "Dr. Lauren Rubal"),
+  faq=[("Do I need to be in another program to use Integrative Tools?", "No. Integrative Tools supports every program, and it can also be the focus of your care on its own."),
+       ("Will Dr. Rubal replace my primary care physician?", "No. Dr. Rubal works alongside your primary care physician and any other specialists you see."),
+       ("How do you decide which supplements to recommend?", "Supplements are recommended only where research supports them for your situation, with attention to quality, dosing and interactions with any medications.")]),
 ]
 
 def program(p):
     others = [q for q in PROGRAMS if q["slug"] != p["slug"]]
-    rel = "".join(f'<a class="rel" href="{q["slug"]}.html"><span class="eyebrow">Program</span><b>{q["name"]}</b><span class="more">Learn more {A}</span></a>' for q in others)
-    addr = "".join(f"<li>{a}</li>" for a in p["addresses"])
-    steps = "".join(f'<div class="s"><svg class="ico"><use href="#{i}"/></svg><div><b>{t}</b><p>{d}</p></div></div>' for i, t, d in p["steps"])
-    rh, rlead, rbody = p["row"]
-    body = f'''{head_band('<a href="conditions.html">Conditions &amp; Care</a> / ' + re.sub("<[^>]+>","",p["name"]), "Conditions &amp; Care", p["h1"], p["lede"])}
+    strip = "".join(f'<a href="{q["slug"]}.html">{q["name"]}</a>' for q in others)
+    intro = "".join(f"<p>{x}</p>" for x in p["intro"])
+    treat = "".join(f'<div class="dl-row"><dt>{t}</dt><dd>{d}</dd></div>' for t, d in p["treat"])
+    when = "".join(f"<li>{w}</li>" for w in p["when"])
+    steps = "".join(f'<li><b>{t}</b><span>{d}</span></li>' for t, d in p["steps"])
+    tx = "".join(f'<div><h3>{h}</h3><ul>' + "".join(f"<li>{i}</li>" for i in items) + "</ul></div>" for h, items in p["tx"])
+    faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in p["faq"])
+    pq, pa = p["pull"]
+    body = f'''<section class="cp"><div class="wrap cp-grid">
+<article class="cp-main">
+<p class="crumb"><a href="conditions.html">Conditions &amp; Care</a> / {re.sub("<[^>]+>","",p["short"])}</p>
+<h1>{p["name"]}</h1>
+<p class="cp-q">{p["quote"]}</p>
+<div class="cp-intro">{intro}</div>
+<p class="cp-mcta"><a class="btn btn-fill" href="contact.html">Request a Consultation {A}</a></p>
 
-<section class="band" style="border-top:0"><div class="wrap two">
-<div><span class="eyebrow">About this program</span><h2>What this program is for.</h2></div>
-<div class="body"><p>{p["intro"]}</p>
-<h3 class="list-h">What we address</h3><ul class="ticks">{addr}</ul>
-<p style="margin-top:26px"><a class="btn btn-fill" href="contact.html">Request a Consultation {A}</a></p></div>
+<h2>{p["treat_h"]}</h2>
+<dl class="cp-dl">{treat}</dl>
+
+<blockquote class="cp-pull"><p>“{pq}”</p><cite>{pa}</cite></blockquote>
+
+<h2>When to see a specialist</h2>
+<p>It may be time to talk with Dr. Rubal if:</p>
+<ul class="cp-when">{when}</ul>
+
+<h2>How Dr. Rubal evaluates</h2>
+<ol class="cp-steps">{steps}</ol>
+
+<h2>Treatment may include</h2>
+<div class="cp-tx">{tx}</div>
+<p class="cp-note">Every plan is individualized. Not every patient needs every test or treatment.</p>
+
+<h2>Common questions</h2>
+<div class="faq cp-faq">{faq}</div>
+</article>
+
+<aside class="cp-card">
+<div class="cp-who"><img src="img/dr-rubal-avatar.jpg" alt="Dr. Lauren Rubal" width="64" height="64"><div><b>Talk with Dr. Rubal about {p["talk"]}</b></div></div>
+<ul>
+<li>USC-trained Reproductive Endocrinologist</li>
+<li>Double board certified, Integrative Medicine &amp; OB/GYN</li>
+<li>In person in San Juan Capistrano or virtual</li>
+<li>Se habla español</li>
+</ul>
+<a class="btn btn-fill" href="contact.html">Request a Consultation {A}</a>
+<a class="cp-call" href="tel:+19494156704">Or call (949) 415-6704</a>
+</aside>
 </div></section>
 
-<section class="approach" style="border-bottom:0;padding-top:52px"><div class="wrap">
-<span class="eyebrow">How it works</span>
-<h2 class="lede-h" style="font-size:clamp(38px,3.2vw,52px);margin:14px 0 6px">Your care, step by step.</h2>
-<div class="steps4">{steps}</div>
-</div></section>
-
-<section class="im-rows"><div class="wrap">
-<div class="im-row">
-<img src="img/{p["img"]}" alt="" loading="lazy">
-<div><span class="eyebrow">The integrative difference</span><h2>{rh}</h2>
-<p class="lead">{rlead}</p><p>{rbody}</p>
-<p style="margin-top:22px"><a class="btn btn-line" href="integrative-medicine.html">What Is Integrative Medicine? {A}</a></p></div>
-</div>
-</div></section>
-
-<section class="band tint"><div class="wrap">
-<span class="eyebrow">Other programs</span>
-<h2 class="lede-h">Explore more care.</h2>
-<div class="rels">{rel}</div>
-</div></section>
+<section class="cp-strip"><div class="wrap"><span class="eyebrow">Other programs</span><nav>{strip}<a href="integrative-medicine.html">What Is Integrative Medicine?</a></nav></div></section>
 '''
     plain = re.sub("<[^>]+>", "", p["name"]).replace("&amp;", "&")
-    page(p["slug"] + ".html", f"{plain} | Lauren Rubal, MD",
-         re.sub("<[^>]+>", "", p["lede"]).replace('"', "'")[:300], body)
+    desc = re.sub("<[^>]+>", "", p["intro"][0]).replace('"', "'")
+    desc = desc if len(desc) < 300 else desc[:297].rsplit(" ", 1)[0] + "..."
+    page(p["slug"] + ".html", f"{plain} | Lauren Rubal, MD", desc, body, banner=False)
 
 for p in PROGRAMS: program(p)
 

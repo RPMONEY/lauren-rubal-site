@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 24 */
+/* Lauren Rubal, MD | Build 25 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -403,3 +403,69 @@ form.req .fine a{color:var(--plum)}
 .pt-card,.rel{min-width:0}
 @media (max-width:1180px){.pt-grid{grid-template-columns:1fr}}
 @media (max-width:560px){.btn{white-space:normal;height:auto;min-height:48px;padding:12px 22px;line-height:1.35;text-align:left}}
+
+/* ---------- Program pages: editorial layout + sticky consult card ---------- */
+.cp{padding:56px 0 72px}
+.cp-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(40px,6vw,96px);align-items:start}
+.cp-main{max-width:700px}
+.cp-main .crumb{font-family:var(--sans);font-size:12px;letter-spacing:.08em;color:var(--muted);margin-bottom:20px}
+.cp-main .crumb a{text-decoration:none}.cp-main .crumb a:hover{color:var(--plum)}
+.cp-main h1{font-size:clamp(42px,4vw,62px);line-height:1.02;margin-bottom:18px}
+.cp-q{font-family:var(--display);font-style:italic;font-size:clamp(23px,1.9vw,29px);line-height:1.25;color:var(--plum);margin-bottom:30px}
+.cp-intro p,.cp-main > p{font-size:18.5px;line-height:1.65}
+.cp-intro p+p{margin-top:20px}
+.cp-main h2{font-size:clamp(30px,2.4vw,38px);line-height:1.08;margin:56px 0 20px;padding-top:30px;border-top:1px solid var(--line)}
+.cp-dl{margin:0}
+.dl-row{display:grid;grid-template-columns:200px 1fr;gap:26px;padding:16px 0;border-bottom:1px solid var(--line)}
+.dl-row:first-child{padding-top:4px}
+.dl-row dt{font-family:var(--display);font-weight:500;font-size:23px;line-height:1.15;color:var(--ink)}
+.dl-row dd{font-size:17px;line-height:1.55;margin:0}
+.cp-pull{margin:52px 0 0;padding:34px 38px;background:var(--bg-2)}
+.cp-pull p{font-family:var(--display);font-style:italic;font-size:clamp(25px,2vw,31px);line-height:1.25;color:var(--ink)}
+.cp-pull cite{display:block;margin-top:14px;font-style:normal;font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--plum)}
+.cp-when{list-style:none;margin-top:12px}
+.cp-when li{position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--line);font-size:17.5px;line-height:1.4}
+.cp-when li::before{content:"";position:absolute;left:2px;top:19px;width:14px;height:1px;background:var(--sage)}
+.cp-steps{list-style:none;counter-reset:st}
+.cp-steps li{counter-increment:st;display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.cp-steps li::before{content:counter(st);grid-row:span 2;width:34px;height:34px;border-radius:50%;border:1px solid var(--sage);color:var(--sage-dk);display:grid;place-items:center;font-family:var(--sans);font-size:13px;font-weight:500}
+.cp-steps b{font-family:var(--display);font-weight:500;font-size:23px;line-height:1.2;color:var(--ink)}
+.cp-steps span{font-size:17px;line-height:1.5;margin-top:4px}
+.cp-tx{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cp-tx > div{background:var(--bg-2);padding:24px 26px}
+.cp-tx h3{font-size:24px;margin-bottom:10px}
+.cp-tx ul{list-style:none}
+.cp-tx li{font-size:16.5px;line-height:1.4;padding:7px 0 7px 18px;position:relative}
+.cp-tx li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:1px;background:var(--plum)}
+.cp-note{font-family:var(--sans);font-size:12.5px !important;color:var(--muted);margin-top:14px}
+.cp-faq{max-width:none}
+.cp-card{position:sticky;top:124px;background:var(--bg-2);border-top:2px solid var(--sage);padding:28px 28px 26px}
+.cp-who{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.cp-who img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.cp-who b{font-family:var(--display);font-weight:500;font-size:23px;line-height:1.12;color:var(--ink)}
+.cp-card ul{list-style:none;margin-bottom:22px;border-top:1px solid var(--line-2)}
+.cp-card li{font-size:15.5px;line-height:1.35;padding:10px 0 10px 24px;border-bottom:1px solid var(--line);position:relative}
+.cp-card li::before{content:"";position:absolute;left:2px;top:15px;width:9px;height:5px;border-left:1.5px solid var(--sage);border-bottom:1.5px solid var(--sage);transform:rotate(-45deg)}
+.cp-card .btn{width:100%;justify-content:center}
+.cp-call{display:block;text-align:center;margin-top:14px;font-family:var(--sans);font-size:13.5px;color:var(--plum)}
+.cp-strip{background:var(--bg-2);padding:26px 0}
+.cp-strip .wrap{display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.cp-strip nav{display:flex;flex-wrap:wrap}
+.cp-strip nav a{font-size:17px;text-decoration:none;color:var(--ink);padding:4px 18px;border-left:1px solid var(--line-2)}
+.cp-strip nav a:first-child{border-left:0;padding-left:0}
+.cp-strip nav a:hover{color:var(--plum)}
+@media (max-width:1000px){
+  .cp-grid{grid-template-columns:1fr}
+  .cp-card{position:static;max-width:520px}
+}
+@media (max-width:640px){
+  .cp{padding:34px 0 50px}
+  .dl-row{grid-template-columns:1fr;gap:4px}
+  .cp-tx{grid-template-columns:1fr}
+  .cp-pull{padding:26px 24px}
+  .cp-strip nav a{border-left:0;padding:6px 0;width:100%}
+}
+/* tighter header bands on inner pages */
+.about-head{padding:52px 0 44px}
+.cp-mcta{display:none}
+@media (max-width:1000px){.cp-mcta{display:block;margin-top:26px}}

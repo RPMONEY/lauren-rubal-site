@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 25 */
+/* Lauren Rubal, MD | Build 26 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -469,3 +469,19 @@ form.req .fine a{color:var(--plum)}
 .about-head{padding:52px 0 44px}
 .cp-mcta{display:none}
 @media (max-width:1000px){.cp-mcta{display:block;margin-top:26px}}
+
+/* Program pages: panels to break up the text, quote on its own */
+.cp-panel{margin-top:52px;padding:34px 38px 30px}
+.cp-panel.warm{background:var(--bg-2)}
+.cp-panel.sage{background:#E8EBE2}
+.cp-main .cp-panel h2{margin:0 0 18px;padding-top:0;border-top:0}
+.cp-panel .dl-row{border-bottom-color:var(--line-2)}
+.cp-panel .dl-row:last-child{border-bottom:0;padding-bottom:0}
+.cp-panel.sage p{font-size:18px}
+.cp-panel.sage .cp-when li{border-bottom-color:#CBD2C3}
+.cp-panel.sage .cp-when li:last-child{border-bottom:0}
+.cp-panel.sage .cp-when li::before{background:var(--sage-dk)}
+.cp-pull{margin:64px 0 12px;padding:0 0 0 34px;background:none;border-left:2px solid var(--plum)}
+.cp-pull p{font-size:clamp(28px,2.4vw,36px);line-height:1.22}
+.cp-panel.sage + h2,.cp-pull + .cp-panel{margin-top:64px}
+@media (max-width:640px){.cp-panel{padding:26px 22px 22px;margin-left:-22px;margin-right:-22px}.cp-pull{padding-left:22px}}

@@ -58,7 +58,7 @@ PROGRAMS = [
          ("Your plan", "Reviewed together, with time for questions, and adjusted as your cycle responds.")],
   tx=[("Restorative and lifestyle", ["Nutrition and metabolic support", "Sleep, stress and movement", "Targeted supplements where the evidence supports them"]),
       ("Medical and surgical", ["Cycle-timed hormone support", "Medication for specific conditions, such as insulin resistance", "Minimally invasive surgery for endometriosis, fibroids, or polyps when needed"])],
-  pull=("Simply that a woman is not just her ovaries. You are a whole person.", "Dr. Lauren Rubal"),
+  pull=("Simply that a woman is not just her ovaries.", "Dr. Lauren Rubal"),
   faq=[("Do I have to go on birth control?", "Not necessarily. Dr. Rubal’s focus is finding and treating the underlying cause of your symptoms. She will walk you through all of your options so you can make an informed choice that fits your goals."),
        ("Can I come in if I’m not trying to get pregnant?", "Yes. Many patients come in simply to feel better and understand their bodies. A healthy cycle matters at every stage of life."),
        ("Do you see teenagers?", "Yes. Cycle concerns often begin in adolescence, and our <a href=\"hormone-transition.html\">Hormone Transition</a> program includes care for teens."),
@@ -89,7 +89,7 @@ PROGRAMS = [
          ("After pregnancy loss", "A focused evaluation that can include uterine, hormonal, genetic, blood-clotting and immune factors.")],
   tx=[("Restorative and lifestyle", ["Nutrition, lifestyle and metabolic optimization", "Targeted supplements where the evidence supports them", "Timing guided by your own charted cycle"]),
       ("Medical and surgical", ["Hormone optimization and ovulation support", "Treatment of thyroid and other contributing conditions", "Surgery to normalize structure and anatomy when needed"])],
-  pull=("It’s an honor to walk the difficult parts of the journey together. It is such a blessing to see joyous outcomes.", "Dr. Lauren Rubal"),
+  pull=("I also monitor your cycles closely with ultrasounds and other methods, such as serial hormone levels.", "Dr. Lauren Rubal"),
   faq=[("Do you offer IVF?", "Dr. Rubal’s practice focuses on restorative reproductive medicine, which works to identify and treat the underlying causes of infertility. She is happy to talk through every option with you, including IVF."),
        ("Should my partner be evaluated too?", "Yes, when appropriate. Fertility involves both partners, and a semen analysis is a standard part of a complete evaluation."),
        ("I’ve already had testing elsewhere. Will I need to repeat it?", "Bring your records. Dr. Rubal will review what has already been done and recommend additional testing only where it adds something."),
@@ -170,14 +170,14 @@ def program(p):
 <div class="cp-intro">{intro}</div>
 <p class="cp-mcta"><a class="btn btn-fill" href="contact.html">Request a Consultation {A}</a></p>
 
-<h2>{p["treat_h"]}</h2>
-<dl class="cp-dl">{treat}</dl>
+<section class="cp-panel warm"><h2>{p["treat_h"]}</h2>
+<dl class="cp-dl">{treat}</dl></section>
 
 <blockquote class="cp-pull"><p>“{pq}”</p><cite>{pa}</cite></blockquote>
 
-<h2>When to see a specialist</h2>
+<section class="cp-panel sage"><h2>When to see a specialist</h2>
 <p>It may be time to talk with Dr. Rubal if:</p>
-<ul class="cp-when">{when}</ul>
+<ul class="cp-when">{when}</ul></section>
 
 <h2>How Dr. Rubal evaluates</h2>
 <ol class="cp-steps">{steps}</ol>

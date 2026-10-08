@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 27 */
+/* Lauren Rubal, MD | Build 28 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -485,3 +485,55 @@ form.req .fine a{color:var(--plum)}
 .cp-pull p{font-size:clamp(28px,2.4vw,36px);line-height:1.22}
 .cp-panel.sage + h2,.cp-pull + .cp-panel{margin-top:64px}
 @media (max-width:640px){.cp-panel{padding:26px 22px 22px;margin-left:-22px;margin-right:-22px}.cp-pull{padding-left:22px}}
+
+/* Program pages: dark specialist panel */
+.cp-panel.dark{background:#231C1A;color:#EDE6E0;border:0}
+.cp-main .cp-panel.dark h2{color:#fff}
+.cp-panel.dark p{color:#E2D9D2;font-size:18px}
+.cp-panel.dark .cp-when li{border-bottom-color:rgba(237,230,224,.14);color:#F4EEE9}
+.cp-panel.dark .cp-when li:last-child{border-bottom:0}
+.cp-panel.dark .cp-when li::before{background:#A8B59B}
+.cp-panel.dark .btn{margin-top:22px}
+
+/* Signature elements */
+.sig{margin:52px 0 0;padding:30px 0 0;border-top:1px solid var(--line)}
+.sig figcaption{margin-bottom:22px}
+.sig h3{font-size:clamp(28px,2.2vw,34px);margin-top:8px;line-height:1.1}
+.sig-note{font-size:16.5px;line-height:1.55;color:var(--muted);margin-top:18px}
+.cyc-bar{display:flex;height:16px;border-radius:999px;overflow:hidden;gap:3px}
+.cyc-bar span,.cyc-key i{display:block}
+.c1{background:var(--plum)}.c2{background:#CDB9A6}.c3{background:var(--sage)}.c4{background:#E3D6C8}
+.cyc-key{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
+.cyc-key div{display:grid;grid-template-columns:14px 1fr;column-gap:10px}
+.cyc-key i{width:12px;height:12px;border-radius:50%;margin-top:6px;grid-row:span 2}
+.cyc-key b{font-family:var(--display);font-weight:500;font-size:20px;color:var(--ink);line-height:1.2}
+.cyc-key span{font-size:15px;line-height:1.4;color:var(--muted)}
+.pair{display:grid;grid-template-columns:1.3fr 1fr;gap:0;border:1px solid var(--line-2)}
+.pair > div{padding:24px 26px}
+.pair > div + div{border-left:1px solid var(--line-2)}
+.pair b{display:block;font-family:var(--display);font-weight:500;font-size:23px;color:var(--ink);margin-bottom:10px}
+.pair ul{list-style:none}
+.pair li{font-size:16.5px;line-height:1.4;padding:7px 0 7px 18px;position:relative}
+.pair li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:1px;background:var(--plum)}
+.sig-hub svg{display:block;width:100%;max-width:640px;height:auto}
+.sig-hub .ln line{stroke:var(--line-2);stroke-width:1.2;stroke-dasharray:4 5}
+.sig-hub .core{fill:var(--bg-2);stroke:var(--sage);stroke-width:1.5}
+.sig-hub .core-t{font-family:var(--display);font-size:25px;fill:var(--ink)}
+.sig-hub .nd circle{fill:var(--sage)}
+.sig-hub .nd text{font-family:var(--display);font-size:23px;fill:var(--ink)}
+.life{display:flex;justify-content:space-between;position:relative;margin:4px 0 26px;padding-top:6px}
+.life::before{content:"";position:absolute;left:6px;right:6px;top:12px;height:1px;background:var(--line-2)}
+.life span{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:12px;font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--plum);flex:1}
+.life span:last-child{align-items:flex-end;text-align:right}
+.life span:nth-child(2){align-items:center;text-align:center}
+.life i{width:13px;height:13px;border-radius:50%;background:var(--sage);border:3px solid var(--bg-2);box-sizing:content-box;margin-top:-1px}
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.stages h3{font-size:24px;line-height:1.1;margin-bottom:10px}
+.stages p{font-size:16px;line-height:1.5}
+@media (max-width:820px){.stages{grid-template-columns:1fr}.life{display:none}.cyc-key{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.pair{grid-template-columns:1fr}.pair > div + div{border-left:0;border-top:1px solid var(--line-2)}.cyc-key{grid-template-columns:1fr}}
+.sig-hub svg{max-width:720px}
+.cyc-key div{align-content:start;grid-template-rows:auto auto}
+.cyc-key span{grid-column:2}
+.cyc-key b{grid-column:2;grid-row:1}
+.cyc-key i{grid-column:1;grid-row:1}

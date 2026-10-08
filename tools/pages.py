@@ -2,6 +2,8 @@
 Shell (head, header, banner, footer) is taken from site/integrative-medicine.html.
 Usage: python3 tools/pages.py site <BUILD>"""
 import sys, os, re
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sigs import SIGS
 SITE, BUILD = sys.argv[1], sys.argv[2]
 src = open(os.path.join(SITE, "integrative-medicine.html")).read()
 HEAD = src.split("<header class=\"site\">")[0]
@@ -100,7 +102,7 @@ PROGRAMS = [
   intro=[
    "Hormones shift at predictable points in life, and those shifts can affect your cycle, sleep, mood, energy, skin, weight and long-term health. Too often, women are told these changes are simply part of growing up, having a baby, or getting older, and that there is little to do but wait them out.",
    "Our Hormone Transition program offers specialized support for individuals navigating significant hormonal changes during key life stages: adolescence, postpartum, and menopause. Dr. Rubal looks at what is changing, why, and what can help, using lifestyle, nutritional and medical options matched to your history and goals."],
-  treat_h="Three key life stages",
+  treat_h="Three key life stages", stages=["Teens", "After pregnancy", "Often 40s and beyond"],
   treat=[
    ("Adolescence", "The first years of menstruation are often irregular, but painful, very heavy, or absent periods deserve attention. Early signs of conditions such as PCOS or endometriosis often appear in the teen years, and a thoughtful evaluation can make a lasting difference."),
    ("Postpartum", "After pregnancy, hormones shift dramatically. Cycles may take time to return, especially while breastfeeding, and some women develop thyroid changes, mood changes, fatigue, or bleeding concerns that deserve a closer look."),
@@ -157,6 +159,13 @@ def program(p):
     strip = "".join(f'<a href="{q["slug"]}.html">{q["name"]}</a>' for q in others)
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     treat = "".join(f'<div class="dl-row"><dt>{t}</dt><dd>{d}</dd></div>' for t, d in p["treat"])
+    if p.get("stages"):
+        line = "".join(f'<span><i></i>{s}</span>' for s in p["stages"])
+        cols = "".join(f'<div><h3>{t}</h3><p>{d}</p></div>' for t, d in p["treat"])
+        treat_block = f'<div class="life">{line}</div><div class="stages">{cols}</div>'
+    else:
+        treat_block = f'<dl class="cp-dl">{treat}</dl>'
+    sig = SIGS.get(p["slug"], lambda: "")()
     when = "".join(f"<li>{w}</li>" for w in p["when"])
     steps = "".join(f'<li><b>{t}</b><span>{d}</span></li>' for t, d in p["steps"])
     tx = "".join(f'<div><h3>{h}</h3><ul>' + "".join(f"<li>{i}</li>" for i in items) + "</ul></div>" for h, items in p["tx"])
@@ -170,14 +179,16 @@ def program(p):
 <div class="cp-intro">{intro}</div>
 <p class="cp-mcta"><a class="btn btn-fill" href="contact.html">Request a Consultation {A}</a></p>
 
+{sig}
 <section class="cp-panel warm"><h2>{p["treat_h"]}</h2>
-<dl class="cp-dl">{treat}</dl></section>
+{treat_block}</section>
 
 <blockquote class="cp-pull"><p>“{pq}”</p><cite>{pa}</cite></blockquote>
 
-<section class="cp-panel sage"><h2>When to see a specialist</h2>
+<section class="cp-panel dark"><h2>When to see a specialist</h2>
 <p>It may be time to talk with Dr. Rubal if:</p>
-<ul class="cp-when">{when}</ul></section>
+<ul class="cp-when">{when}</ul>
+<a class="btn btn-fill" href="contact.html">Request a Consultation {A}</a></section>
 
 <h2>How Dr. Rubal evaluates</h2>
 <ol class="cp-steps">{steps}</ol>

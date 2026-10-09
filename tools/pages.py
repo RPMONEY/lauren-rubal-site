@@ -274,7 +274,7 @@ contact = f'''{head_band("", "Contact", "Request a <em>consultation.</em>", "In 
 <div class="c-info">
 <div class="c-block"><span class="eyebrow">Call the office</span><a class="c-big" href="tel:+19494156704">(949) 415-6704</a><p class="fine">Fax (949) 269-3263</p></div>
 <div class="c-block"><span class="eyebrow">Visit</span><p class="c-addr">31551 Camino Capistrano, Suite D<br>San Juan Capistrano, CA 92675</p><a class="more" href="https://maps.google.com/?q={MAPQ}" target="_blank" rel="noopener">Get directions {A}</a></div>
-<div class="c-block"><span class="eyebrow">Office hours</span><p>{TODO("office hours")}</p></div>
+<div class="c-block"><span class="eyebrow">Office hours</span><p>By appointment</p></div>
 <div class="c-block"><span class="eyebrow">Virtual visits</span><p>Already scheduled? Visit <a href="patients.html">For Patients</a> to enter the virtual waiting room.</p></div>
 <div class="c-map"><iframe loading="lazy" title="Map to the office" src="https://www.google.com/maps?q={MAPQ}&z=15&output=embed"></iframe></div>
 </div>

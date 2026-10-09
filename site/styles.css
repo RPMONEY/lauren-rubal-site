@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 63 */
+/* Lauren Rubal, MD | Build 64 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -762,3 +762,5 @@ nav.main a.btn{margin-left:22px}
 .dl-row dt,.stages h3{font-weight:600}
 /* Rule: every item title is semibold (cards, steps, lists, factors, treatment groups) */
 .cp-steps b,.pair b,.cp-tx h3,.cyc-key b,.s b,.tool h3,.pt-card h3,.rel b,.tabpanel h3,.c-addr{font-weight:600}
+/* Phones: photos get a clean edge, no fade */
+@media (max-width:820px){.hero .photo::after,.page-hero .photo::after{display:none}}

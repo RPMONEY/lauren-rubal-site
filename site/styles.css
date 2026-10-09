@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 34 */
+/* Lauren Rubal, MD | Build 35 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -580,3 +580,27 @@ form.req .fine a{color:var(--plum)}
 .pt-todo .todo{font-size:11.5px}
 @media (prefers-reduced-motion:reduce){.pt-card,.pt-card:hover{transform:none}}
 .pt-card,.pt-card *{text-decoration:none}
+
+/* Integrative page: definitions as text rows, no photos */
+.im-text .im-row{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:64px;align-items:start;padding:40px 0}
+.im-text .im-row h2{margin-top:10px}
+
+/* ===== Site-wide type scale ===== */
+/* Display: homepage hero only */
+.hero h1{font-size:clamp(46px,4.6vw,70px)}
+/* Page titles (one per inner page) */
+.page-hero h1,.legal-head h1,.about-head h1,.bio-text h1,.cp-main h1{font-size:clamp(38px,3.4vw,52px);line-height:1.05}
+/* Section headings */
+.about h2,.approach h2,.band .lede-h,.coast h2,.conditions h2,.im-feature h2,.im-row h2,.two h2,.cp-main h2,.bio-text h2,.sig h3,form.req h2,.approach .lede-h{font-size:clamp(30px,2.5vw,40px);line-height:1.08}
+.legal article h2{font-size:clamp(26px,2vw,32px)}
+/* Item titles inside cards, rows and lists */
+.col h3,.pt-card h3,.rel b,.s b,.tool h3,.it-head h3,.dl-row dt,.cp-steps b,.cp-tx h3,.stages h3,.isnt h3,.list-h,.pair b,.cp-who b,.c-addr,.legal article h3{font-size:clamp(21px,1.6vw,24px);line-height:1.15}
+.cyc-key b{font-size:19px}
+/* Supporting display text */
+.cp-q,.im-row .lead{font-size:clamp(20px,1.5vw,23px)}
+.cp-pull p{font-size:clamp(24px,2vw,30px)}
+.faq summary{font-size:clamp(19px,1.4vw,21px);padding:18px 0}
+.signup h3{font-size:clamp(20px,1.5vw,23px);line-height:1.25}
+.signup{padding:30px 40px}
+.c-big{font-size:clamp(30px,2.4vw,36px)}
+.hero p,.page-hero p,.about-head p,.im-feature .def{font-size:clamp(18px,1.25vw,20px)}

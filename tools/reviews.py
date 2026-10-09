@@ -8,12 +8,12 @@ GOOGLE = "https://www.google.com/maps/place/Lauren+A.+Rubal,+MD/@33.5044586,-117
 RATING, COUNT = "5.0", 43  # update to match Google
 
 HOME = [
- ("Elana M.", "Dr. Rubal is in a league of her own—truly an exceptional physician by every measure. My only regret is not going to her sooner."),
- ("Angela W.", "Dr. Rubal's unparalleled care and expertise was instrumental in helping to make my husband's and my dream of having a child in our arms a reality."),
- ("Joleen W.", "What stands out is I've always felt heard and respected, but I have never felt as KNOWN as Dr Rubal made me feel."),
- ("Claudia Q.", "No other doctor has spent that kind of time with us. Every time we saw her, we walked away with a lot more knowledge and hope."),
- ("Julia J.", "You will not find a more compassionate or thorough physician out there. We only wish we had found Dr. Rubal sooner."),
- ("Elaina H.", "Dr. Rubal leaves no stone unturned, is committed to your goals, unrushed and compassionate. I am very impressed with her care."),
+ ("Jenny T.", "From the first appointment, Dr. Rubal told us she had a lot of hope for us. Her belief in the possible, deep dive into root causes, and integrative western approach led us to get pregnant 7 months later (something we questioned many times if it was even possible for us!)."),
+ ("Elana M.", "She listened to me, totally respected my views, and met me where I was on my journey. Dr. Rubal is extraordinarily intelligent, knowledgeable, thoughtful, and thorough. Her recommendations are grounded in years of clinical experience and up to date research."),
+ ("Michelle H.", "Dr. Rubal told me more on our first meeting than multiple Reproductive Endocrinologists combined. I’ve been on a fertility journey for 5 years with multiple failed IUI’s and IVF’s, and by far this has been the most positive Doctors experience I’ve encountered."),
+ ("Joleen W.", "It's only been a few days since our first appointment and I keep comparing her to other, very well respected new patient appointments I've had with other doctors. What stands out is I've always felt heard and respected, but I have never felt as KNOWN as Dr Rubal made me feel."),
+ ("Claudia Q.", "She took the time to know us, both me and my husband, and asked us a lot of questions to get to any underlying causes of our recurrent miscarriages. No other doctor has spent that kind of time with us. Every time we saw her, we walked away with a lot more knowledge and hope."),
+ ("Julia J.", "We traveled to see her after seeing 2 previous REI's who did not recognize our goals or provide holistic treatment options - we were successful after 2 months! She picked up on subtle details they had completely overlooked. She truly evaluates you as an entire person - not just a clinical case."),
 ]
 PAGES = {
  "optimized-fertility.html": ("Angela C.", "After struggling with infertility for 8 years and experiencing a failed IVF cycle, I came to Dr. Rubal feeling discouraged and searching for answers. From the very beginning, she truly listened to my concerns and took the time to investigate the root causes affecting my health and fertility."),

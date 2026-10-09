@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 93 */
+/* Lauren Rubal, MD | Build 94 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -856,8 +856,8 @@ nav.main a.btn{margin-left:22px}
 @media (max-width:820px){.bio .wrap{row-gap:40px!important}.bio-side ul{margin-top:0!important}}
 @media (max-width:820px){.dl-row{padding-bottom:22px!important}.dl-row + .dl-row{padding-top:18px!important}.dl-row:last-child{padding-bottom:0!important}}
 @media (max-width:820px){.cp-q{margin-bottom:20px!important}.cp-mcta + *{margin-top:48px!important}.su-note{padding-left:22px;margin-top:8px!important}}
-/* mobile signup: circle fills the end of the pill */
-@media (max-width:900px){.signup-form .btn{right:0!important;width:52px!important;height:52px!important;min-height:52px}.su-note{margin-top:0!important}}
+/* mobile signup: floating circle with triangle */
+@media (max-width:900px){.signup-form .btn{right:4px!important;width:44px!important;height:44px!important;min-height:44px}.signup-form .btn::after{content:""!important;inset:auto!important;left:50%!important;top:50%!important;width:11px;height:13px;transform:translate(-38%,-50%);background:#fff;clip-path:polygon(0 0,100% 50%,0 100%)}.su-note{margin-top:0!important}}
 /* mobile other-programs: list rows with arrows */
 @media (max-width:820px){.cp-strip{padding:40px 0!important}.cp-strip .eyebrow{margin-bottom:14px!important}.cp-strip nav{display:block!important}
 .cp-strip nav a,.cp-strip nav a:first-child{display:flex!important;justify-content:space-between;align-items:center;gap:16px;padding:14px 0!important;border:0!important;border-top:1px solid var(--line-2)!important}

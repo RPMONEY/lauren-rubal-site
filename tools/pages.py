@@ -60,7 +60,7 @@ PROGRAMS = [
          ("Your plan", "Reviewed together, with time for questions, and adjusted as your cycle responds.")],
   tx=[("Restorative and lifestyle", ["Nutrition and metabolic support", "Sleep, stress and movement", "Targeted supplements where the evidence supports them"]),
       ("Medical and surgical", ["Cycle-timed hormone support", "Medication for specific conditions, such as insulin resistance", "Minimally invasive surgery for endometriosis, fibroids, or polyps when needed"])],
-  pull=("Simply that a woman is not just her ovaries.", "Dr. Lauren Rubal"),
+  pull=("You are a whole person. And so we must address and acknowledge your mental, emotional, spiritual, and physical state.", "Dr. Lauren Rubal"),
   faq=[("Do I have to go on birth control?", "Not necessarily. Dr. Rubal’s focus is finding and treating the underlying cause of your symptoms. She will walk you through all of your options so you can make an informed choice that fits your goals."),
        ("Can I come in if I’m not trying to get pregnant?", "Yes. Many patients come in simply to feel better and understand their bodies. A healthy cycle matters at every stage of life."),
        ("Do you see teenagers?", "Yes. Cycle concerns often begin in adolescence, and our <a href=\"hormone-transition.html\">Hormone Transition</a> program includes care for teens."),
@@ -148,7 +148,7 @@ PROGRAMS = [
          ("Targeted support", "Supplements and conventional treatment, each chosen on the evidence and reviewed over time.")],
   tx=[("Restorative and lifestyle", ["Nutrition and metabolic support", "Sleep and stress-resilience strategies", "Movement suited to your health and goals"]),
       ("Medical", ["Targeted supplements where the evidence supports them", "Thyroid evaluation and treatment", "Conventional medication when indicated"])],
-  pull=("You are a whole person. And so we must address and acknowledge your mental, emotional, spiritual, and physical state.", "Dr. Lauren Rubal"),
+  pull=("It seeks out all appropriate therapies, including conventional and alternative, and emphasizes the partnership between you and me.", "Dr. Lauren Rubal"),
   faq=[("Do I need to be in another program to use Integrative Tools?", "No. Integrative Tools supports every program, and it can also be the focus of your care on its own."),
        ("Will Dr. Rubal replace my primary care physician?", "No. Dr. Rubal works alongside your primary care physician and any other specialists you see."),
        ("How do you decide which supplements to recommend?", "Supplements are recommended only where research supports them for your situation, with attention to quality, dosing and interactions with any medications.")]),
@@ -182,6 +182,7 @@ def program(p):
 {sig}
 <section class="cp-panel warm"><h2>{p["treat_h"]}</h2>
 {treat_block}</section>
+
 
 <blockquote class="cp-pull"><p>“{pq}”</p><cite>{pa}</cite></blockquote>
 

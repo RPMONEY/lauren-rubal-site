@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 54 */
+/* Lauren Rubal, MD | Build 55 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -716,3 +716,24 @@ nav.main a.btn{margin-left:22px}
 @media (max-width:640px){.cp-panel{margin-left:-20px;margin-right:-20px}}
 
 
+
+/* Integrative page: her definitions as tabs */
+.im-tabs{padding:64px 0 56px}
+.im-tabs > .wrap > h2{font-size:clamp(30px,2.5vw,40px);margin:12px 0 26px}
+.tablist{display:flex;gap:8px;margin-bottom:6px}
+.tablist button{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:13px 24px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--muted);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.tablist button:hover{border-color:var(--ink);color:var(--ink)}
+.tablist button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tablist .short{display:none}
+.tabpanel .im-row{border-bottom:0;border-top:1px solid var(--line-2);margin-top:22px;padding:34px 0 0;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:64px;align-items:start}
+.tabpanel h3{font-size:clamp(30px,2.5vw,40px);line-height:1.08;margin-top:10px}
+@media (max-width:820px){
+  .im-tabs{padding:44px 0 36px}
+  .tablist{gap:0;border:1px solid var(--line-2);border-radius:999px;padding:3px}
+  .tablist button{flex:1;padding:11px 4px;border:0;font-family:var(--serif);font-size:15.5px;font-weight:400;letter-spacing:0;text-transform:none}
+  .tablist .long{display:none}.tablist .short{display:inline}
+  .tabpanel .im-row{grid-template-columns:1fr;gap:6px;padding-top:24px;margin-top:18px}
+  .tabpanel h3{font-size:28px}
+}
+/* Pull quote on phones: quieter, no oversized rule */
+@media (max-width:640px){.cp-pull{margin:40px 0 0;padding-left:16px;border-left-width:1px}.cp-pull p{font-size:22px;line-height:1.32}.cp-pull cite{font-size:10.5px;margin-top:10px}}

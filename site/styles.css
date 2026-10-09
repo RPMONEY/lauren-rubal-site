@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 67 */
+/* Lauren Rubal, MD | Build 68 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -779,4 +779,8 @@ nav.main a.btn{margin-left:22px}
 /* Homepage hero: photo contained within the content width, fade kept */
 @media (min-width:821px){
   .hero .photo{right:calc((100% - min(100%,1400px))/2 + clamp(22px,6.8vw,110px));width:calc((min(100%,1400px) - 2*clamp(22px,6.8vw,110px))*.6)}
+}
+/* Phones: bring back a short top fade on hero photos (ends well above her face) */
+@media (max-width:820px){
+  .hero .photo::after,.page-hero .photo::after{display:block;background:linear-gradient(180deg,var(--bg) 0%,rgba(249,246,242,.6) 4%,rgba(249,246,242,0) 11%)}
 }

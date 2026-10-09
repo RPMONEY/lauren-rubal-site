@@ -200,7 +200,7 @@ def program(p):
 </article>
 
 <aside class="cp-card">
-<div class="cp-who"><img src="img/dr-rubal-avatar.jpg" alt="Dr. Lauren Rubal" width="64" height="64"><div><b>Talk with Dr. Rubal about {p["talk"]}</b></div></div>
+<div class="cp-who"><img src="img/dr-rubal-avatar.jpg?v=71" alt="Dr. Lauren Rubal" width="64" height="64"><div><b>Talk with Dr. Rubal about {p["talk"]}</b></div></div>
 <ul>
 <li>USC-trained Reproductive Endocrinologist</li>
 <li>Double board certified, Integrative Medicine &amp; OB/GYN</li>

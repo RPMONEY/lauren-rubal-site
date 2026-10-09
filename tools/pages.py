@@ -68,9 +68,8 @@ PROGRAMS = [
  dict(slug="optimized-fertility", name="Optimized Fertility &amp; Miscarriage Prevention", short="Fertility &amp; Miscarriage", talk="your fertility",
   quote="“We’ve been trying for a while. Is something wrong?”",
   intro=[
-   "Not conceiving when you expected to, or losing a pregnancy, can feel isolating and overwhelming. Dr. Rubal practiced full-scope reproductive endocrinology and infertility for years, and she knows how many layers this diagnosis carries.",
-   "When couples go to a fertility center, they may feel pressured to go directly to IVF. For some, it is not an option they are interested in, because of their beliefs, the cost, the hormones, or the procedures involved. Others have tried it without success. Our Optimized Fertility &amp; Miscarriage Prevention program offers a different starting point.",
-   "Also known as Restorative Reproductive Medicine, it looks at understanding the reasons behind fertility issues using a detailed evaluation of your hormones, inflammation, nutrient status, microbiomes, gut, and environmental exposures. Hormonal medications are used judiciously, as one part of a broader plan, and your cycles are monitored closely to support your fertility month by month."],
+   "Not conceiving when you expected to, or losing a pregnancy, can feel isolating and overwhelming. For those looking for an alternative to IVF, or who have tried it without success, Dr. Rubal offers a different starting point.",
+   "Her Optimized Fertility &amp; Miscarriage Prevention program, also known as Restorative Reproductive Medicine, looks for factors affecting fertility through a detailed evaluation of hormones, inflammation, nutrient status, gut health, microbiomes, and environmental exposures. Treatment is individualized, with medications used judiciously and cycles closely monitored to support fertility month by month."],
   treat_h="Who this program helps",
   treat=[
    ("Difficulty conceiving", "Generally defined as not conceiving after 12 months of trying, or after 6 months if you are 35 or older. You don’t have to wait that long to ask questions."),

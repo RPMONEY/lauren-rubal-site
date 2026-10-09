@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 64 */
+/* Lauren Rubal, MD | Build 65 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -764,3 +764,10 @@ nav.main a.btn{margin-left:22px}
 .cp-steps b,.pair b,.cp-tx h3,.cyc-key b,.s b,.tool h3,.pt-card h3,.rel b,.tabpanel h3,.c-addr{font-weight:600}
 /* Phones: photos get a clean edge, no fade */
 @media (max-width:820px){.hero .photo::after,.page-hero .photo::after{display:none}}
+/* Inner-page hero: photo contained within the content width, clean edge */
+@media (min-width:821px){
+  .page-hero{padding:40px 0}
+  .page-hero .photo{top:40px;bottom:40px;right:calc((100% - min(100%,1400px))/2 + clamp(22px,6.8vw,110px));width:calc((min(100%,1400px) - 2*clamp(22px,6.8vw,110px))*.44)}
+  .page-hero .photo::after{display:none}
+  .page-hero .copy{max-width:calc((min(100vw,1400px) - 2*clamp(22px,6.8vw,110px))*.5)}
+}

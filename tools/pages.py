@@ -255,7 +255,7 @@ patients = f'''{head_band("", "For Patients", "Everything you need <em>before</e
 <section class="band" style="border-top:0"><div class="wrap two">
 <div><span class="eyebrow">Practical details</span><h2>Visits, payment &amp; policies.</h2></div>
 <div class="faq">
-<details open><summary>Where are visits held?</summary><p>In person at 31551 Camino Capistrano, Suite D, San Juan Capistrano, CA 92675, or by secure video visit. Dr. Rubal speaks English and Spanish.</p></details>
+<details><summary>Where are visits held?</summary><p>In person at 31551 Camino Capistrano, Suite D, San Juan Capistrano, CA 92675, or by secure video visit. Dr. Rubal speaks English and Spanish.</p></details>
 <details><summary>Do you accept insurance?</summary><p>{TODO("whether the practice is in-network, out-of-network or self-pay, and what patients should expect")}</p><p>If you are uninsured or not using insurance, you have the right to a <a href="good-faith-estimate.html">Good Faith Estimate</a> of expected charges.</p></details>
 <details><summary>What should I bring to my first visit?</summary><p>Prior lab results, imaging reports, and any cycle tracking you've done, along with a list of current medications and supplements. {TODO("anything else the office asks new patients to bring")}</p></details>
 <details><summary>What is your cancellation policy?</summary><p>{TODO("cancellation and no-show policy")}</p></details>

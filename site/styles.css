@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 35 */
+/* Lauren Rubal, MD | Build 36 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -604,3 +604,8 @@ form.req .fine a{color:var(--plum)}
 .signup{padding:30px 40px}
 .c-big{font-size:clamp(30px,2.4vw,36px)}
 .hero p,.page-hero p,.about-head p,.im-feature .def{font-size:clamp(18px,1.25vw,20px)}
+/* Signup: center the field row on the headline; note hangs below without shifting it */
+.signup-form{align-self:center}
+.su-note{position:absolute;left:0;top:100%;margin-top:10px}
+@media (max-width:900px){.su-note{position:static;margin-top:4px}}
+.signup{padding:32px 40px 42px}

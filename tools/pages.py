@@ -100,7 +100,7 @@ PROGRAMS = [
   intro=[
    "Hormones shift at predictable points in life, and those shifts can affect your cycle, sleep, mood, energy, skin, weight and long-term health. Too often, women are told these changes are simply part of growing up, having a baby, or getting older, and that there is little to do but wait them out.",
    "Our Hormone Transition program offers specialized support for individuals navigating significant hormonal changes during key life stages: adolescence, postpartum, and menopause. Dr. Rubal looks at what is changing, why, and what can help, using lifestyle, nutritional and medical options matched to your history and goals."],
-  treat_h="Three key life stages", stages=["Teens", "After pregnancy", "Often 40s and beyond"],
+  treat_h="Three key life stages", stages=["Teens", "After pregnancy", "40s and beyond"],
   treat=[
    ("Adolescence", "The first years of menstruation are often irregular, but painful, very heavy, or absent periods deserve attention. Early signs of conditions such as PCOS or endometriosis often appear in the teen years, and a thoughtful evaluation can make a lasting difference."),
    ("Postpartum", "After pregnancy, hormones shift dramatically. Cycles may take time to return, especially while breastfeeding, and some women develop thyroid changes, mood changes, fatigue, or bleeding concerns that deserve a closer look."),

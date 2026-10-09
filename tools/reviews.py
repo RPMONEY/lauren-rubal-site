@@ -4,21 +4,21 @@ Run after pages.py:  python3 tools/reviews.py site"""
 import sys, os, re, html
 
 SITE = sys.argv[1] if len(sys.argv) > 1 else "site"
-GOOGLE = "https://www.google.com/maps/place/Lauren+A.+Rubal,+MD/@33.5044586,-117.6644428"
+GOOGLE = "https://search.google.com/local/reviews?placeid=ChIJt-kVQfrh3IAR_8WU7rNMutk"
 RATING, COUNT = "5.0", 43  # update to match Google
 
 HOME = [
  ("Jenny T.", "From the first appointment, Dr. Rubal told us she had a lot of hope for us. Her belief in the possible, deep dive into root causes, and integrative western approach led us to get pregnant 7 months later (something we questioned many times if it was even possible for us!)."),
- ("Elana M.", "She listened to me, totally respected my views, and met me where I was on my journey. Dr. Rubal is extraordinarily intelligent, knowledgeable, thoughtful, and thorough. Her recommendations are grounded in years of clinical experience and up to date research."),
+ ("Elle T.", "She walked me through one of the most difficult circumstances of my life and did so with a great amount of compassion and expertise. I felt truly cared for and well taken care of physically, emotionally, and spiritually. She has a gift."),
  ("Michelle H.", "Dr. Rubal told me more on our first meeting than multiple Reproductive Endocrinologists combined. I’ve been on a fertility journey for 5 years with multiple failed IUI’s and IVF’s, and by far this has been the most positive Doctors experience I’ve encountered."),
- ("Joleen W.", "It's only been a few days since our first appointment and I keep comparing her to other, very well respected new patient appointments I've had with other doctors. What stands out is I've always felt heard and respected, but I have never felt as KNOWN as Dr Rubal made me feel."),
+ ("Venetia M.", "My experience working with Dr. Rubal has been wonderful. She is caring, understanding, generous with her time and knowledgeable. It's very easy to get in touch with her and her office. I've never worked with a doctor that's so compassionate and wants you to genuinely reach your goals."),
  ("Claudia Q.", "She took the time to know us, both me and my husband, and asked us a lot of questions to get to any underlying causes of our recurrent miscarriages. No other doctor has spent that kind of time with us. Every time we saw her, we walked away with a lot more knowledge and hope."),
  ("Julia J.", "We traveled to see her after seeing 2 previous REI's who did not recognize our goals or provide holistic treatment options - we were successful after 2 months! She picked up on subtle details they had completely overlooked. She truly evaluates you as an entire person - not just a clinical case."),
 ]
 PAGES = {
  "optimized-fertility.html": ("Angela C.", "After struggling with infertility for 8 years and experiencing a failed IVF cycle, I came to Dr. Rubal feeling discouraged and searching for answers. From the very beginning, she truly listened to my concerns and took the time to investigate the root causes affecting my health and fertility."),
  "normalized-cycles.html": ("Emelee L.", "She made me a priority and took my symptoms/biomarkers very seriously! I am happy to say that I am on my way to feeling like myself again."),
- "integrative-tools.html": ("Caroline S.", "Her treatment plan was individualized, realistic, and focused on long-term healing utilizing medicine, supplements and lifestyle factors (all of this in three visits!)."),
+ "integrative-tools.html": ("Chelsea H.", "She is so compassionate, kind, generous with her knowledge and time. And, she is brilliant - that goes without saying! Her care is tailored, holistic, flexible and effective!"),
 }
 IM_PAGE = ("The Stroms", "Being a busy wife, mom, and doctor myself, experiencing Dr. Rubal's comprehensive, compassionate, accessible, and evidence-based practice has been an incredible blessing.")
 

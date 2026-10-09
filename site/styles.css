@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 78 */
+/* Lauren Rubal, MD | Build 79 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -832,6 +832,10 @@ nav.main a.btn{margin-left:22px}
 .two .im-cred{max-width:500px}
 .im-cred + .im-cred{margin-top:18px;padding-top:18px}
 @media (max-width:820px){.two .im-cred{display:none}}
+/* two-column sections: right column starts level with the heading, not the eyebrow */
+@media (min-width:901px){.im-feature .wrap > div:nth-child(2){padding-top:33px}}
+@media (min-width:1301px){.approach .head > p{padding-top:27px}}
+@media (min-width:821px){.im-row > div:nth-child(2){padding-top:27px}.two > .body{padding-top:31px}}
 /* ===== TYPE SCALE: the only place font sizes are set (except logo mark, USC badge, diagram SVG). Edit tools/typescale.css, run python3 tools/typescale.py ===== */
 :root{--fs-0:10.5px;--fs-1:12px;--fs-2:13px;--fs-3:15px;--fs-4:17px;--fs-5:19px;--fs-6:23px;--fs-7:clamp(27px,2.25vw,32px);--fs-8:clamp(36px,3.4vw,49px);--fs-9:clamp(40px,4.6vw,66px)}
 @media (max-width:820px){:root{--fs-0:10px;--fs-4:16px;--fs-5:17px;--fs-6:20px}}

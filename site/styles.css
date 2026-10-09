@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 32 */
+/* Lauren Rubal, MD | Build 33 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -565,3 +565,17 @@ form.req .fine a{color:var(--plum)}
   .bio-side img{display:none}
   .bio-mphoto{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:52% 18%;margin:0 0 28px}
 }
+
+/* For Patients action cards: aligned buttons, whole-card hover */
+.pt-card{text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s}
+.pt-card p{margin-bottom:24px}
+.pt-card .btn{margin-top:auto}
+.pt-card:hover{box-shadow:0 22px 44px -28px rgba(40,28,24,.45);transform:translateY(-3px)}
+.pt-card:hover .btn-fill{background:var(--sage-dk)}
+.pt-card:hover .btn-line{background:var(--sage);color:#fff}
+.pt-card:hover .btn svg{transform:translateX(3px)}
+.pt-card .btn svg{transition:transform .2s}
+.pt-card:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+.pt-todo{display:block;margin-top:12px;min-height:22px}
+.pt-todo .todo{font-size:11.5px}
+@media (prefers-reduced-motion:reduce){.pt-card,.pt-card:hover{transform:none}}

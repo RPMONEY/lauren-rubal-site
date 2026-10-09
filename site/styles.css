@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 29 */
+/* Lauren Rubal, MD | Build 30 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -537,3 +537,8 @@ form.req .fine a{color:var(--plum)}
 .cyc-key span{grid-column:2}
 .cyc-key b{grid-column:2;grid-row:1}
 .cyc-key i{grid-column:1;grid-row:1}
+/* Life-stage timeline: dots aligned to the start of each stage column */
+.life{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;justify-content:initial;padding-top:0}
+.life::before{left:0;right:0;top:6px}
+.life span,.life span:nth-child(2),.life span:last-child{align-items:flex-start;text-align:left}
+.life i{width:13px;height:13px;border:0;margin:0;box-sizing:border-box;box-shadow:0 0 0 4px var(--bg-2)}

@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 38 */
+/* Lauren Rubal, MD | Build 39 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -616,3 +616,19 @@ form.req .fine a{color:var(--plum)}
 .cp-strip nav a{flex:1;text-align:center;white-space:nowrap}
 .cp-strip nav a:first-child{padding-left:18px;border-left:1px solid var(--line-2)}
 @media (max-width:1100px){.cp-strip .wrap{flex-wrap:wrap}.cp-strip nav{flex-wrap:wrap}.cp-strip nav a{flex:0 0 auto;text-align:left;white-space:normal}.cp-strip nav a:first-child{border-left:0;padding-left:0}}
+
+/* LR mark beside the wordmark */
+.mark{display:flex;align-items:center;gap:14px}
+.mark > span{display:block;min-width:0}
+.mark-ico{width:46px;height:46px;flex:none}
+footer.site .mark-ico{width:56px;height:56px}
+@media (max-width:560px){.mark-ico{width:36px;height:36px}.mark{gap:10px}}
+
+/* Even (lining) numerals site-wide; phone and fax in the same face */
+body,h1,h2,h3,.c-big,.c-addr{font-variant-numeric:lining-nums}
+.c-big{font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.2vw,34px);letter-spacing:-.01em}
+.c-block .fine{font-family:var(--serif);font-size:18px;color:var(--muted);margin-top:6px}
+.c-addr{font-family:var(--serif);font-size:19px;line-height:1.45}
+.mark b{white-space:nowrap}
+@media (max-width:560px){.mark b{font-size:18px;letter-spacing:.08em}.mark small{font-size:6.5px;letter-spacing:.06em;max-width:220px}}
+@media (max-width:360px){.mark b{font-size:16px;letter-spacing:.06em}}

@@ -51,7 +51,7 @@ def put(fp, marker, block, anchor, before=True):
 put(os.path.join(SITE, "index.html"), "reviews", HOME_HTML, '<section class="coast">')
 for f, (n, q) in PAGES.items():
     fp = os.path.join(SITE, f)
-    m = re.search(r'<blockquote class="cp-pull">.*?</blockquote>', open(fp).read(), re.S)
+    m = re.search(r'<p class="cp-note">.*?</p>', open(fp).read(), re.S)  # after "Treatment may include"
     put(fp, "review", card(n, q, "rv-card rv-one"), m.group(0), before=False)
 put(os.path.join(SITE, "integrative-medicine.html"), "review",
     f'<section class="rv-band"><div class="wrap">{card(*IM_PAGE, "rv-card rv-one")}</div></section>', '<section class="coast">')

@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 87 */
+/* Lauren Rubal, MD | Build 88 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -848,6 +848,7 @@ nav.main a.btn{margin-left:22px}
 /* mobile program cards (A): each program in its own tinted box */
 @media (max-width:1180px){.cols3 .col{background:var(--bg-2);border:0!important;margin:0 0 12px!important;padding:24px 20px 22px!important}
 .cols3 .col h3{border:0;padding-bottom:0;margin:0 0 10px;min-height:0}.cols3 .col:last-child{margin-bottom:0!important}.cols3 .col p{margin-bottom:16px}}
+@media (max-width:820px){.bio .wrap{row-gap:40px!important}.bio-side ul{margin-top:0!important}}
 /* ===== TYPE SCALE: the only place font sizes are set (except logo mark, USC badge, diagram SVG). Edit tools/typescale.css, run python3 tools/typescale.py ===== */
 :root{--fs-0:10.5px;--fs-1:12px;--fs-2:13px;--fs-3:15px;--fs-4:17px;--fs-5:19px;--fs-6:23px;--fs-7:clamp(27px,2.25vw,32px);--fs-8:clamp(36px,3.4vw,49px);--fs-9:clamp(40px,4.6vw,66px)}
 @media (max-width:820px){:root{--fs-0:10px;--fs-4:16px;--fs-5:17px;--fs-6:20px}}

@@ -33,3 +33,4 @@ body,.hero p,.page-hero p,.about-head p,.im-feature .def,.legal-head p,.legal ar
 .rv-score b{font-size:40px}.rv-line b{font-size:var(--fs-6)}
 @media (max-width:820px){.rv-score b{font-size:32px}}
 .rv-sum span:not(.rv-stars){font-size:var(--fs-1)}.rv-sum b{font-size:var(--fs-6)}
+.su-lede{font-size:var(--fs-4)}

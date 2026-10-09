@@ -36,7 +36,7 @@ PROGRAMS = [
  dict(slug="normalized-cycles", name="Normalized Cycles", short="Normalized Cycles", talk="your cycles",
   quote="“My periods have always been like this. Is that just normal for me?”",
   intro=[
-   "Many women are told that painful, heavy, or unpredictable periods are something to live with or simply suppress. Dr. Rubal sees your cycle as a window into your overall health, and when something is off, there is often a reason worth finding.",
+   "Many women are told that painful, heavy, or unpredictable periods are something to live with or simply suppress. Dr. Rubal sees your cycle as a window into your overall health, and when something is off, the goal is to understand why.",
    "Her Normalized Cycles program looks at potential causes including ovulation, hormone balance, thyroid function, insulin resistance, inflammation, fibroids, and polyps. The goal is a healthier, more predictable cycle with fewer symptoms and a stronger foundation for future fertility."],
   treat_h="What we treat",
   treat=[

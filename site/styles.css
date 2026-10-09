@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 96 */
+/* Lauren Rubal, MD | Build 97 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -866,6 +866,16 @@ nav.main a.btn{margin-left:22px}
 .cp-panel.dark{padding-top:42px!important}
 @media (max-width:820px){.cp-panel.dark{padding-top:32px!important}}
 .life{margin-top:26px!important;margin-bottom:18px!important}
+/* IM page: more room under headings that sit above the tab slider / ruled tools list */
+.im-tabs > .wrap > h2 + *{margin-top:32px!important}.im-tabs + .band .tools{margin-top:32px!important}
+@media (max-width:820px){.im-tabs > .wrap > h2 + *{margin-top:26px!important}.im-tabs + .band .tools{margin-top:26px!important}}
+/* heading -> boxed or ruled block: a little more room than heading -> text */
+@media (min-width:821px){.page-hero + .approach .steps4{margin-top:32px!important}}
+@media (max-width:820px){.steps4,.cols3,.pt-grid,.tools{margin-top:26px!important}.two > .faq{margin-top:10px!important}}
+/* mobile menu: Home link, divider under the program list */
+.nav-home{display:none!important}
+@media (max-width:1300px){nav.main a.nav-home{display:block!important}nav.main .dd-menu{border-bottom:1px solid var(--line)}nav.main a.btn{margin-left:0!important}}
+@media (max-width:820px){nav.main{padding-left:20px!important;padding-right:20px!important}}
 /* ===== TYPE SCALE: the only place font sizes are set (except logo mark, USC badge, diagram SVG). Edit tools/typescale.css, run python3 tools/typescale.py ===== */
 :root{--fs-0:10.5px;--fs-1:12px;--fs-2:13px;--fs-3:15px;--fs-4:17px;--fs-5:19px;--fs-6:23px;--fs-7:clamp(27px,2.25vw,32px);--fs-8:clamp(36px,3.4vw,49px);--fs-9:clamp(40px,4.6vw,66px)}
 @media (max-width:820px){:root{--fs-0:10px;--fs-4:16px;--fs-5:17px;--fs-6:20px}}

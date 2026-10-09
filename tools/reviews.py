@@ -29,10 +29,12 @@ def card(name, q, cls="rv-card"):
 def score():
     return f'<div class="rv-score"><b>{RATING}</b>{STARS}<span>{COUNT} reviews on Google</span><a class="more" href="{GOOGLE}" target="_blank" rel="noopener">Read all reviews {A}</a></div>'
 
+SUM = f'<p class="rv-sum">{STARS}<b>{RATING}</b><span>{COUNT} reviews on Google</span></p>'
 HOME_HTML = (f'<section class="reviews" aria-labelledby="rv-h"><div class="wrap"><div class="rv-head"><div><span class="eyebrow">Patient reviews</span>'
-  f'<h2 id="rv-h">In their own <em>words.</em></h2></div>{score()}</div>'
+  f'<h2 id="rv-h">In their own <em>words.</em></h2>{SUM}</div>{score()}</div>'
   f'<div class="rv-track" tabindex="0" aria-label="Patient reviews, scroll for more">{"".join(card(n, q) for n, q in HOME)}</div>'
-  '<div class="rv-nav"><button type="button" data-d="-1" aria-label="Previous reviews">←</button><button type="button" data-d="1" aria-label="Next reviews">→</button></div>'
+  f'<div class="rv-foot"><a class="more" href="{GOOGLE}" target="_blank" rel="noopener">Read all reviews {A}</a>'
+  '<div class="rv-nav"><button type="button" data-d="-1" aria-label="Previous reviews">←</button><button type="button" data-d="1" aria-label="Next reviews">→</button></div></div>'
   '<script>(function(){var t=document.querySelector(".rv-track");document.querySelectorAll(".rv-nav button").forEach(function(b){b.addEventListener("click",function(){var c=t.querySelector(".rv-card");t.scrollBy({left:(c.offsetWidth+16)*b.dataset.d,behavior:"smooth"})})})})();</script>'
   '</div></section>')
 LINE = (f'<p class="rv-line"><a href="{GOOGLE}" target="_blank" rel="noopener">{STARS}<b>{RATING}</b><span>{COUNT} reviews on Google</span></a></p>')

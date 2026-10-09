@@ -154,7 +154,8 @@ PROGRAMS = [
 
 def program(p):
     others = [q for q in PROGRAMS if q["slug"] != p["slug"]]
-    strip = "".join(f'<a href="{q["slug"]}.html">{q["name"]}</a>' for q in others)
+    # only the three core programs; Integrative Tools is part of all three, not a separate program
+    strip = "".join(f'<a href="{q["slug"]}.html">{q["name"]}</a>' for q in others if q["slug"] != "integrative-tools")
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     treat = "".join(f'<div class="dl-row"><dt>{t}</dt><dd>{d}</dd></div>' for t, d in p["treat"])
     if p.get("stages"):
@@ -212,7 +213,7 @@ def program(p):
 </aside>
 </div></section>
 
-<section class="cp-strip"><div class="wrap"><span class="eyebrow">Other programs</span><nav>{strip}<a href="integrative-medicine.html">What Is Integrative Medicine?</a></nav></div></section>
+<section class="cp-strip"><div class="wrap"><span class="eyebrow">{"Our programs" if p["slug"] == "integrative-tools" else "Other programs"}</span><nav>{strip}</nav></div></section>
 '''
     plain = re.sub("<[^>]+>", "", p["name"]).replace("&amp;", "&")
     desc = re.sub("<[^>]+>", "", p["intro"][0]).replace('"', "'")

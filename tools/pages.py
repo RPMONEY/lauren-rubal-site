@@ -246,7 +246,7 @@ patients = f'''{head_band("", "For Patients", "Everything you need <em>before</e
 
 <section class="band tint"><div class="wrap">
 <div class="pt-grid">
-<a class="pt-card" href="#"><span class="eyebrow">New patients</span><h3>Intake forms</h3><p>Please complete your intake forms before your first visit.</p><span class="btn btn-fill">Start Intake Forms {A}</span><span class="pt-todo">{TODO("intake forms link")}</span></a>
+<a class="pt-card" href="#"><span class="eyebrow">New patients</span><h3>Intake forms</h3><p>Please complete your intake forms before your first visit.</p><span class="btn btn-line">Start Intake Forms {A}</span><span class="pt-todo">{TODO("intake forms link")}</span></a>
 <a class="pt-card" href="#"><span class="eyebrow">Existing patients</span><h3>Patient portal</h3><p>Message the office, view results, and manage appointments.</p><span class="btn btn-line">Log In to Portal {A}</span><span class="pt-todo">{TODO("portal login link")}</span></a>
 <a class="pt-card" href="#"><span class="eyebrow">Virtual visits</span><h3>Virtual waiting room</h3><p>Have a video visit scheduled? Join at your appointment time.</p><span class="btn btn-line">Join Waiting Room {A}</span><span class="pt-todo">{TODO("virtual waiting room link")}</span></a>
 </div>

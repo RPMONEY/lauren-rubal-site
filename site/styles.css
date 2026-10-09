@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 55 */
+/* Lauren Rubal, MD | Build 56 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -737,3 +737,8 @@ nav.main a.btn{margin-left:22px}
 }
 /* Pull quote on phones: quieter, no oversized rule */
 @media (max-width:640px){.cp-pull{margin:40px 0 0;padding-left:16px;border-left-width:1px}.cp-pull p{font-size:22px;line-height:1.32}.cp-pull cite{font-size:10.5px;margin-top:10px}}
+/* About: on phones, set "A different vision" apart on a tinted panel */
+@media (max-width:900px){
+  .bio-vision{background:var(--bg-2);margin:40px -20px 0;padding:34px 20px 30px;border-top:2px solid var(--sage)}
+  .bio-vision h2{margin-top:0}
+}

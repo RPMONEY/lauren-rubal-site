@@ -1,5 +1,5 @@
 """Generate the legal pages for laurenrubalmd.com from site/index.html's header and footer.
-Usage: python3 tools/legal.py site <BUILD>"""
+Usage: python3 tools/legal.py site <BUILD>   (then: python3 tools/seo.py site)"""
 import sys, os, re
 SITE, BUILD = sys.argv[1], sys.argv[2]
 NAME = "Lauren Rubal, MD"

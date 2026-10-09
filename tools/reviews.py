@@ -53,8 +53,9 @@ for f, (n, q) in PAGES.items():
     fp = os.path.join(SITE, f)
     m = re.search(r'<p class="cp-note">.*?</p>', open(fp).read(), re.S)  # after "Treatment may include"
     put(fp, "review", card(n, q, "rv-card rv-one"), m.group(0), before=False)
-put(os.path.join(SITE, "integrative-medicine.html"), "review",
-    f'<section class="rv-band"><div class="wrap">{card(*IM_PAGE, "rv-card rv-one")}</div></section>', '<section class="coast">')
+# Integrative Medicine page: no review (removed at Ryan's request)
+h = open(os.path.join(SITE, "integrative-medicine.html")).read()
+open(os.path.join(SITE, "integrative-medicine.html"), "w").write(re.sub(r"<!-- review -->.*?<!-- /review -->\n?", "", h, flags=re.S))
 ct = os.path.join(SITE, "contact.html")
 put(ct, "rvline", LINE, re.search(r'<form class="req"[^>]*>', open(ct).read()).group(0), before=False)
 print("reviews placed")

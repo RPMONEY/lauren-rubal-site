@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 61 */
+/* Lauren Rubal, MD | Build 62 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -757,3 +757,6 @@ nav.main a.btn{margin-left:22px}
 .bio-vision{background:var(--bg-2);border-top:2px solid var(--sage);margin-top:44px;padding:38px 44px 34px}
 .bio-text .bio-vision h2{margin-top:0}
 @media (max-width:900px){.bio-vision{margin:40px -20px 0;padding:34px 20px 30px}}
+/* Bold item titles: integrative points and program names */
+.im-feature li b,.col h3,.it-head h3{font-weight:600}
+.dl-row dt,.stages h3{font-weight:600}

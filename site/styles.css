@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 68 */
+/* Lauren Rubal, MD | Build 70 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -784,3 +784,38 @@ nav.main a.btn{margin-left:22px}
 @media (max-width:820px){
   .hero .photo::after,.page-hero .photo::after{display:block;background:linear-gradient(180deg,var(--bg) 0%,rgba(249,246,242,.6) 4%,rgba(249,246,242,0) 11%)}
 }
+/* Integrative Tools focus areas: plain list instead of pills */
+.chips{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:4px 34px;margin-top:16px}
+.chips li{font-family:var(--serif);font-size:17px;font-weight:400;letter-spacing:0;color:var(--ink);border:0;border-radius:0;background:none;padding:2px 0 2px 20px;position:relative}
+.chips li::before{content:"";position:absolute;left:0;top:50%;width:10px;height:1px;background:var(--sage)}
+@media (max-width:640px){.chips{grid-template-columns:1fr 1fr;gap:6px 18px}}
+
+/* ===== Mobile spacing system: one rhythm on every page ===== */
+@media (max-width:820px){
+  /* sections: 40px top and bottom */
+  .band,.approach,.split,.reviews,.closing,.conditions,.im-feature,.about,.im-tabs,.bio,.cp,.trust + section{padding-top:40px!important;padding-bottom:40px!important}
+  .coast .wrap{padding-top:40px;padding-bottom:40px}
+  .about{margin-top:0}
+  .about-head,.legal-head{padding-top:32px!important;padding-bottom:0!important}
+  .about-head + section,.legal-head + section,.legal-head + .wrap{padding-top:24px!important}
+  .im-tabs + section{padding-top:40px!important}
+  /* label -> heading 10px, heading -> content 16px */
+  .eyebrow + h1,.eyebrow + h2,.eyebrow + h3{margin-top:10px!important}
+  main h1,main h2,section h1,section h2,.lede-h{margin-bottom:16px!important}
+  section h1 + *,section h2 + *,.lede-h + *{margin-top:0!important}
+  /* two-part heads: no extra gap between heading block and its text */
+  .approach .head,.two,.im-feature .wrap,.about .wrap,.split .wrap,.contact-grid{gap:16px!important}
+  .approach .head p,.two .body{margin-top:0!important;padding-left:0;border-left:0}
+  .steps4,.cols3,.cols4,.quotes,.tools,.pt-grid,.rels{margin-top:16px!important}
+  /* about block: text, then photo, then button with even 24px steps */
+  .about .text{display:flex;flex-direction:column}
+  .about .btn{margin-top:20px}
+  .about img{margin-top:8px}
+  .cp-main h2,.sig,.cp-panel,.cp-pull{margin-top:36px!important}
+  .im-feature ul{margin:16px 0 20px}
+}
+@media (max-width:820px){
+  section h2:last-child,section h1:last-child{margin-bottom:0!important}
+  .cp-main .cp-panel h2{margin-top:0!important}
+}
+@media (max-width:820px){.about .text .btn{align-self:flex-start}}

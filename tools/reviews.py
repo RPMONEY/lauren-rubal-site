@@ -8,12 +8,12 @@ GOOGLE = "https://www.google.com/maps/place/Lauren+A.+Rubal,+MD/@33.5044586,-117
 RATING, COUNT = "5.0", 43  # update to match Google
 
 HOME = [
- ("Jenny T.", "My husband and I found Dr. Rubal after 3 years of infertility. … Her belief in the possible, deep dive into root causes, and integrative western approach led us to get pregnant 7 months later (something we questioned many times if it was even possible for us!)."),
  ("Elana M.", "Dr. Rubal is in a league of her own—truly an exceptional physician by every measure. My only regret is not going to her sooner."),
- ("Michelle H.", "Dr. Rubal told me more on our first meeting than multiple Reproductive Endocrinologists combined."),
+ ("Angela W.", "Dr. Rubal's unparalleled care and expertise was instrumental in helping to make my husband's and my dream of having a child in our arms a reality."),
  ("Joleen W.", "What stands out is I've always felt heard and respected, but I have never felt as KNOWN as Dr Rubal made me feel."),
- ("Angela W.", "I sit here now typing this updated review with the blessing of my baby on my lap. Dr. Rubal's unparalleled care and expertise was instrumental in helping to make my husband's and my dream of having a child in our arms a reality."),
- ("Julia J.", "She truly evaluates you as an entire person - not just a clinical case."),
+ ("Claudia Q.", "No other doctor has spent that kind of time with us. Every time we saw her, we walked away with a lot more knowledge and hope."),
+ ("Julia J.", "You will not find a more compassionate or thorough physician out there. We only wish we had found Dr. Rubal sooner."),
+ ("Elaina H.", "Dr. Rubal leaves no stone unturned, is committed to your goals, unrushed and compassionate. I am very impressed with her care."),
 ]
 PAGES = {
  "optimized-fertility.html": ("Angela C.", "After struggling with infertility for 8 years and experiencing a failed IVF cycle, I came to Dr. Rubal feeling discouraged and searching for answers. From the very beginning, she truly listened to my concerns and took the time to investigate the root causes affecting my health and fertility."),

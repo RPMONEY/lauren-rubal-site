@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 37 */
+/* Lauren Rubal, MD | Build 38 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -610,3 +610,9 @@ form.req .fine a{color:var(--plum)}
 @media (max-width:900px){.su-note{position:static;margin-top:4px}}
 .signup{padding:32px 40px 42px}
 .signup{border-top:2px solid var(--sage)}
+/* Other-programs strip: links spread edge to edge */
+.cp-strip .wrap{flex-wrap:nowrap}
+.cp-strip nav{flex:1;justify-content:space-between;flex-wrap:nowrap}
+.cp-strip nav a{flex:1;text-align:center;white-space:nowrap}
+.cp-strip nav a:first-child{padding-left:18px;border-left:1px solid var(--line-2)}
+@media (max-width:1100px){.cp-strip .wrap{flex-wrap:wrap}.cp-strip nav{flex-wrap:wrap}.cp-strip nav a{flex:0 0 auto;text-align:left;white-space:normal}.cp-strip nav a:first-child{border-left:0;padding-left:0}}

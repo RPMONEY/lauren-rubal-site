@@ -36,9 +36,8 @@ PROGRAMS = [
  dict(slug="normalized-cycles", name="Normalized Cycles", short="Normalized Cycles", talk="your cycles",
   quote="“My periods have always been like this. Is that just normal for me?”",
   intro=[
-   "Many women are told that painful, heavy, or unpredictable periods are something to live with, or that the only answer is to suppress them. Dr. Rubal sees it differently. Your cycle is a window into your overall health, and when it is off, there is usually a reason worth finding.",
-   "Cycle problems can come from many places: whether and how well you ovulate, the balance between estrogen and progesterone, thyroid function, insulin resistance, inflammation, or structural changes in the uterus such as fibroids or polyps. Two women with the same symptom can have very different causes, which is why care starts with understanding yours.",
-   "Our Normalized Cycles program is designed to address a range of menstrual issues, including Polycystic Ovary Syndrome (PCOS), painful periods, Premenstrual Syndrome (PMS), and other menstrual irregularities. The goal is a healthier, more predictable cycle with fewer symptoms, and a stronger foundation for fertility whenever that time comes."],
+   "Many women are told that painful, heavy, or unpredictable periods are something to live with or simply suppress. Dr. Rubal sees your cycle as a window into your overall health, and when something is off, there is often a reason worth finding.",
+   "Her Normalized Cycles program looks at potential causes including ovulation, hormone balance, thyroid function, insulin resistance, inflammation, fibroids, and polyps. The goal is a healthier, more predictable cycle with fewer symptoms and a stronger foundation for future fertility."],
   treat_h="What we treat",
   treat=[
    ("PCOS", "Irregular or absent ovulation, often with acne, excess hair growth, or insulin resistance. One of the most common causes of irregular cycles."),

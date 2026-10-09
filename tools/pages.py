@@ -187,8 +187,7 @@ def program(p):
 
 <section class="cp-panel dark"><h2>When to see a specialist</h2>
 <p>It may be time to talk with Dr. Rubal if:</p>
-<ul class="cp-when">{when}</ul>
-<a class="btn btn-fill" href="contact.html">Request a Consultation {A}</a></section>
+<ul class="cp-when">{when}</ul></section>
 
 <h2>How Dr. Rubal evaluates</h2>
 <ol class="cp-steps">{steps}</ol>

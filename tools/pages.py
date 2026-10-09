@@ -276,6 +276,7 @@ contact = f'''{head_band("", "Contact", "Request a <em>consultation.</em>", "In 
 <div class="c-block"><span class="eyebrow">Visit</span><p class="c-addr">31551 Camino Capistrano, Suite D<br>San Juan Capistrano, CA 92675</p><a class="more" href="https://maps.google.com/?q={MAPQ}" target="_blank" rel="noopener">Get directions {A}</a></div>
 <div class="c-block"><span class="eyebrow">Office hours</span><p>{TODO("office hours")}</p></div>
 <div class="c-block"><span class="eyebrow">Virtual visits</span><p>Already scheduled? Visit <a href="patients.html">For Patients</a> to enter the virtual waiting room.</p></div>
+<div class="c-map"><iframe loading="lazy" title="Map to the office" src="https://www.google.com/maps?q={MAPQ}&z=15&output=embed"></iframe></div>
 </div>
 <form class="req" action="CONTACT_FORM_ACTION_URL" method="post">
 <h2>Send a request</h2>
@@ -290,7 +291,6 @@ contact = f'''{head_band("", "Contact", "Request a <em>consultation.</em>", "In 
 </form>
 </div></section>
 
-<section class="map-band"><iframe loading="lazy" title="Map to the office" src="https://www.google.com/maps?q={MAPQ}&output=embed"></iframe></section>
 '''
 page("contact.html", "Contact &amp; Request a Consultation | Lauren Rubal, MD",
  "Request a consultation with Lauren Rubal, MD in San Juan Capistrano, CA. In-person and virtual visits. Call (949) 415-6704. Se habla español.", contact, banner=False)

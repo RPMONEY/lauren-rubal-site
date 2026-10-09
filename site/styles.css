@@ -1,4 +1,4 @@
-/* Lauren Rubal, MD | Build 30 */
+/* Lauren Rubal, MD | Build 31 */
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cormorant Garamond";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
@@ -542,3 +542,11 @@ form.req .fine a{color:var(--plum)}
 .life::before{left:0;right:0;top:6px}
 .life span,.life span:nth-child(2),.life span:last-child{align-items:flex-start;text-align:left}
 .life i{width:13px;height:13px;border:0;margin:0;box-sizing:border-box;box-shadow:0 0 0 4px var(--bg-2)}
+
+/* No divider rules above program-page section headings */
+.cp-main h2{border-top:0;padding-top:0;margin-top:64px}
+.sig{border-top:0;padding-top:0;margin-top:64px}
+/* Timeline: line edge to edge, each dot centered over its stage column */
+.life span,.life span:nth-child(2),.life span:last-child{align-items:center;text-align:center}
+.c-map{margin-top:8px;border:1px solid var(--line-2)}
+.c-map iframe{display:block;width:100%;height:320px;border:0;filter:saturate(.75) sepia(.1)}

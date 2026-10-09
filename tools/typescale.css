@@ -25,3 +25,10 @@ body,.hero p,.page-hero p,.about-head p,.im-feature .def,.legal-head p,.legal ar
 @media (max-width:1300px){nav.main a:not(.btn),nav.main .dd-top{font-size:var(--fs-4)}nav.main .dd-menu a{font-size:var(--fs-3)}}
 /* fit adjustments after scale */
 .hero h1{max-width:8.4em}
+/* reviews */
+.rv-card figcaption,.rv-score span:not(.rv-stars),.rv-line span{font-size:var(--fs-1)}
+.rv-stars{font-size:var(--fs-3)}
+.rv-card blockquote{font-size:var(--fs-6)}
+.rv-one blockquote{font-size:var(--fs-6)}
+.rv-score b{font-size:40px}.rv-line b{font-size:var(--fs-6)}
+@media (max-width:820px){.rv-score b{font-size:32px}}

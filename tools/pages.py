@@ -1,6 +1,6 @@
 """Generate Conditions & Care, the four program pages, For Patients, Contact and 404.
 Shell (head, header, banner, footer) is taken from site/integrative-medicine.html.
-Usage: python3 tools/pages.py site <BUILD>   (then: python3 tools/seo.py site)"""
+Usage: python3 tools/pages.py site <BUILD>   (then: python3 tools/reviews.py site && python3 tools/seo.py site)"""
 import sys, os, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sigs import SIGS

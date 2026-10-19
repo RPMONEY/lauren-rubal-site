@@ -1,7 +1,12 @@
 {
   "name": "lauren-rubal-site",
   "compatibility_date": "2026-10-01",
+  // Page-view logging. See track.js.
+  "main": "track.js",
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
   "assets": {
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "directory": "./site",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
